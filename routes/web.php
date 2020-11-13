@@ -20,5 +20,5 @@ Route::get('/pay', function () {
 });
 
 Route::post('/payment-request', 'PaymentController@redirectPaymentForm')->name('payment-request');
-Route::post('/payment-response', 'PaymentController@response')->name('payment-response');
+Route::get('/payment-response', 'PaymentController@response')->name('payment-response');
 Route::post('/payment-callback', 'PaymentController@callback')->name('payment-callback');
