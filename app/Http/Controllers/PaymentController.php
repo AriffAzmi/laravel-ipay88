@@ -22,7 +22,7 @@ class PaymentController extends Controller
 
     public function redirectPaymentForm(Request $request)
     {
-    	$paymentRequest = IPay88\Payment\Request($this->merchant_key);
+    	$paymentRequest = new \IPay88\Payment\Request($this->merchant_key);
     	$data = [
     		'MerchantCode' => $paymentRequest->setMerchantCode($this->merchant_code),
 			'PaymentId' =>  $paymentRequest->setPaymentId(1),
@@ -41,12 +41,12 @@ class PaymentController extends Controller
 			'BackendURL' => $paymentRequest->setBackendUrl(route('payment-callback'))
     	];
 
-    	return IPay88\Payment\Request::make($this->merchant_key, $data);
+    	return $paymentRequest->make($this->merchant_key, $data);
     }
 
     public function response(Request $request)
     {
-    	$response = (new IPay88\Payment\Response)->init($this->merchant_code);
+    	$response = (new \IPay88\Payment\Response)->init($this->merchant_code);
 		return $response;
     }
 
