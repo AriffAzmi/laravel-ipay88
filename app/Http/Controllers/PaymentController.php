@@ -37,8 +37,8 @@ class PaymentController extends Controller
 			'Lang' => $paymentRequest->setLang('UTF-8'),
 			'Signature' => $paymentRequest->getSignature(),
 			'SignatureType' => $paymentRequest->setSignatureType('SHA256'),
-			'ResponseURL' => $paymentRequest->setResponseUrl(env("PAYMENT_REDIRECT_URL")),
-			'BackendURL' => $paymentRequest->setBackendUrl(env("PAYMENT_CALLBACK_URL"))
+			'ResponseURL' => $paymentRequest->setResponseUrl(route('payment-response')),
+			'BackendURL' => $paymentRequest->setBackendUrl(route('payment-callback'))
     	];
 
     	return IPay88\Payment\Request::make($this->merchant_key, $data);
