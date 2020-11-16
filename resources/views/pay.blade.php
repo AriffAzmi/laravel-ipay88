@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="row">
 	        <strong>Purchase Summary:</strong>
-	        <h2 class="bg-success">Today's Total: RM 100.00</h2>
+	        <h2 class="bg-success">Today's Total: RM 1.00</h2>
 	        
             <form action="{{ route('payment-request') }}" method="POST">
             	@csrf
