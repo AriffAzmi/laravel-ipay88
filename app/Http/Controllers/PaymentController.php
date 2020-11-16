@@ -26,7 +26,7 @@ class PaymentController extends Controller
     	$data = [
     		'MerchantCode' => $paymentRequest->setMerchantCode($this->merchant_code),
 			'PaymentId' =>  $paymentRequest->setPaymentId(1),
-			'RefNo' => $paymentRequest->setRefNo(exec("uuid")),
+			'RefNo' => $paymentRequest->setRefNo('EXAMPLE000'.rand(1,1000)),
 			'Amount' => $paymentRequest->setAmount('1.00'),
 			'Currency' => $paymentRequest->setCurrency('MYR'),
 			'ProdDesc' => $paymentRequest->setProdDesc('Testing'),
