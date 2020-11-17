@@ -25,7 +25,7 @@ class PaymentController extends Controller
     	$paymentRequest = new \IPay88\Payment\Request($this->merchant_key);
     	$data = [
     		'MerchantCode' => $paymentRequest->setMerchantCode($this->merchant_code),
-			'PaymentId' =>  $paymentRequest->setPaymentId(1),
+			'PaymentId' =>  $paymentRequest->setPaymentId($request->paymentID),
 			'RefNo' => $paymentRequest->setRefNo('EXAMPLE000'.rand(1,1000)),
 			'Amount' => $paymentRequest->setAmount('1.00'),
 			'Currency' => $paymentRequest->setCurrency('MYR'),

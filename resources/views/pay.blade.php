@@ -69,6 +69,31 @@
 	                <input id="contact_no" name="contact_no" type="number" placeholder="" class="form-control" required="">
 	              </div>
 	            </div>
+	            p
+	            <div class="form-group col-md-6">
+	              <label class="control-label" for="phone">Select Bank</label>
+	              <div class="controls">
+	                <select name="paymentID" id="paymentID" class="form-control">
+	                	<option value="6" selected>Maybank2U</option>
+	                	<option value="8">Alliance Online</option>
+	                	<option value="10">AmOnline</option>
+	                	<option value="14">RHB Online</option>
+	                	<option value="15">Hong Leong Online</option>
+	                	<option value="20">CIMB Click</option>
+	                	<option value="31">Public Bank Online</option>
+	                	<option value="102">Bank Rakyat Internet Banking</option>
+	                	<option value="103">Affin Online</option>
+	                	<option value="124">BSN Online</option>
+	                	<option value="134">Bank Islam</option>
+	                	<option value="152">UOB</option>
+	                	<option value="166">Bank Muamalat</option>
+	                	<option value="167">OCBC</option>
+	                	<option value="168">Standard Chartered Bank</option>
+	                	<option value="198">HSBC Online Banking</option>
+	                	<option value="199">Kuwait Finance House</option>
+	                </select>
+	              </div>
+	            </div>
 	            
 	            <div class="form-group col-md-12">
 	                <div class="control-group confirm-btn">
