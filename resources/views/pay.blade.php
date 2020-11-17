@@ -69,7 +69,6 @@
 	                <input id="contact_no" name="contact_no" type="number" placeholder="" class="form-control" required="">
 	              </div>
 	            </div>
-	            p
 	            <div class="form-group col-md-6">
 	              <label class="control-label" for="phone">Select Bank</label>
 	              <div class="controls">
